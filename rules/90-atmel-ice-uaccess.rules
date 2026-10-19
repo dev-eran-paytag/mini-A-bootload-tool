@@ -1,0 +1,12 @@
+# Atmel-ICE / EDBG-family debuggers - grant the logged-in user (seat) access
+# to the raw USB device node, the same way the avrdude package's own rules do.
+#
+# Install:
+#   sudo cp rules/90-atmel-ice-uaccess.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules
+#   sudo udevadm trigger
+# Then unplug/replug the debugger.
+#
+# Note: Atmel-ICE does not expose a /dev/hidraw node on all systems - match on
+# the raw usb device (idVendor 03eb = Atmel/Microchip), not on hidraw.
+SUBSYSTEM=="usb", ATTR{idVendor}=="03eb", TAG+="uaccess"

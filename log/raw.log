@@ -1,0 +1,170 @@
+=== 2026-10-19T13:49:35 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/python -c import usb, pymcuprog
+=== 2026-10-19T13:49:35 rc=0 lsusb -d 03eb:
+--- stdout
+Bus 001 Device 017: ID 03eb:2141 Atmel Corp. ICE debugger
+=== 2026-10-19T13:49:35 rc=0 lsusb -d 03eb:
+--- stdout
+Bus 001 Device 017: ID 03eb:2141 Atmel Corp. ICE debugger
+=== 2026-10-19T13:49:35 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog getvoltage -t atmelice -d atsamd21g18a
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Measured voltage: 3.31V
+=== 2026-10-19T13:49:36 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a ping
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Done.
+=== 2026-10-19T13:49:36 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a erase
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Chip/Bulk erase:
+- Memory type flash is always erased
+Erased.
+Done.
+=== 2026-10-19T13:49:37 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a write -m flash -o 0 -f /home/pyt-demo-1/projects/mini-A-bootload-tool/assets/bootloader-feather_m0-v4.0.0.bin --verify
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Writing from binary file...
+Verifying from binary file...
+Done.
+=== 2026-10-19T13:49:37 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog getvoltage -t atmelice -d atsamd21g18a
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Measured voltage: 3.30V
+=== 2026-10-19T13:49:38 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a ping
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Done.
+=== 2026-10-19T13:49:38 rc=0 /home/pyt-demo-1/projects/mini-A-bootload-tool/build/edbg-diag -t samd21 -b -c 2000 -r -o 0xDEAD00 -z 256 -f /dev/null
+--- stdout
+Debugger: ATMEL Atmel-ICE CMSIS-DAP J42700078725 1.0 (SJ, 1)
+Using CMSIS-DAP v1
+Clock frequency: 2.0 MHz
+Target: SAM D21G18A (Rev D)
+Reading...
+SERIAL: EBD94F675052534A352E3120FF0A090F
+ done.
+=== 2026-10-19T13:49:38 rc=0 lsusb -d 03eb:
+--- stdout
+Bus 001 Device 017: ID 03eb:2141 Atmel Corp. ICE debugger
+=== 2026-10-19T13:49:38 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog getvoltage -t atmelice -d atsamd21g18a
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Measured voltage: 3.32V
+=== 2026-10-19T13:49:38 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a ping
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Done.
+=== 2026-10-19T13:49:38 rc=0 /home/pyt-demo-1/projects/mini-A-bootload-tool/build/edbg-diag -t samd21 -b -c 2000 -r -o 0xDEAD00 -z 256 -f /dev/null
+--- stdout
+Debugger: ATMEL Atmel-ICE CMSIS-DAP J42700078725 1.0 (SJ, 1)
+Using CMSIS-DAP v1
+Clock frequency: 2.0 MHz
+Target: SAM D21G18A (Rev D)
+Reading...
+SERIAL: EBD94F675052534A352E3120FF0A090F
+ done.
+=== 2026-10-19T13:51:13 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/python -c import usb, pymcuprog
+=== 2026-10-19T13:51:13 rc=0 lsusb -d 03eb:
+--- stdout
+Bus 001 Device 017: ID 03eb:2141 Atmel Corp. ICE debugger
+=== 2026-10-19T13:51:19 rc=0 lsusb -d 03eb:
+--- stdout
+Bus 001 Device 017: ID 03eb:2141 Atmel Corp. ICE debugger
+=== 2026-10-19T13:51:20 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog getvoltage -t atmelice -d atsamd21g18a
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Measured voltage: 3.30V
+=== 2026-10-19T13:51:20 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a ping
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Done.
+=== 2026-10-19T13:51:21 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a erase
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Chip/Bulk erase:
+- Memory type flash is always erased
+Erased.
+Done.
+=== 2026-10-19T13:51:21 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a write -m flash -o 0 -f /home/pyt-demo-1/projects/mini-A-bootload-tool/assets/bootloader-feather_m0-v4.0.0.bin --verify
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Writing from binary file...
+Verifying from binary file...
+Done.
+=== 2026-10-19T13:51:21 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog getvoltage -t atmelice -d atsamd21g18a
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Measured voltage: 3.30V
+=== 2026-10-19T13:51:22 rc=0 /home/pyt-demo-1/.venvs/mcuprog/bin/pymcuprog -t atmelice -d atsamd21g18a ping
+--- stdout
+Connecting to any atmelice
+Connected to Atmel-ICE CMSIS-DAP from ATMEL (serial number J42700078725)
+Debugger firmware version 1.42.161
+Debugger hardware revision 0
+Pinging device...
+Ping response: 10010305
+Done.
+=== 2026-10-19T13:51:22 rc=0 /home/pyt-demo-1/projects/mini-A-bootload-tool/build/edbg-diag -t samd21 -b -c 2000 -r -o 0xDEAD00 -z 256 -f /dev/null
+--- stdout
+Debugger: ATMEL Atmel-ICE CMSIS-DAP J42700078725 1.0 (SJ, 1)
+Using CMSIS-DAP v1
+Clock frequency: 2.0 MHz
+Target: SAM D21G18A (Rev D)
+Reading...
+SERIAL: EBD94F675052534A352E3120FF0A090F
+ done.
